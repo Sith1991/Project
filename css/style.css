@@ -1,5 +1,361 @@
-.main sub_main {
+@charset "UTF-8";
+@font-face {
+  font-family: "Conv_Alte Haas Grotesk Bold";
+  src: url("../fonts/Alte Haas Grotesk Bold.eot");
+  src: local("☺"), url("../fonts/Alte Haas Grotesk Bold.woff") format("woff"), url("../fonts/Alte Haas Grotesk Bold.ttf") format("truetype"), url("../fonts/Alte Haas Grotesk Bold.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Conv_Lavanderia_Regular";
+  src: url("../fonts/Lavanderia_Regular.eot");
+  src: local("☺"), url("../fonts/Lavanderia_Regular.woff") format("woff"), url("../fonts/Lavanderia_Regular.ttf") format("truetype"), url("../fonts/Lavanderia_Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Conv_segoeui";
+  src: url("../fonts/segoeui.eot");
+  src: local("☺"), url("../fonts/segoeui.woff") format("woff"), url("../fonts/segoeui.ttf") format("truetype"), url("../fonts/segoeui.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Univers LT 45";
+  src: url("../fonts/UniversLT-Light.eot");
+  src: url("../fonts/UniversLT-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/UniversLT-Light.woff2") format("woff2"), url("../fonts/UniversLT-Light.woff") format("woff"), url("../fonts/UniversLT-Light.ttf") format("truetype"), url("../fonts/UniversLT-Light.svg#UniversLT-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+html, body {
+  height: 100%;
   width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: white;
+  min-width: 360px;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1025px;
+  margin: 0 auto;
+}
+
+.content {
+  flex: 1 1 auto;
+}
+
+.home {
+  background: #000 url(../img/page_bg.jpg) center center no-repeat;
+  margin: 0 auto;
+}
+
+.bgc-white {
+  opacity: 0.9;
+  background-color: #ffffff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 89px;
+  max-width: inherit;
+}
+
+.header {
+  height: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  font-family: "Conv_Lavanderia_Regular";
+  font-size: 41px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #000000;
+  z-index: 3;
+  padding: 0 36px;
+}
+.header__logo span {
+  color: #b73958;
+}
+.header__menu {
+  width: 470px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  z-index: 3;
+  padding: 0 48px;
+}
+@media (max-width: 991px) {
+  .header__menu {
+    display: none;
+  }
+}
+.header .menu_item_horizont {
+  opacity: 0.74;
+  font-family: "Conv_segoeui";
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #454545;
+  text-decoration: none;
+}
+.header__btn {
+  width: 87px;
+  height: 27px;
+  border-radius: 2px;
+  background-color: #de6d6e;
+  font-family: "Conv_segoeui";
+  font-size: 17px;
+  line-height: 27px;
+  font-weight: 400;
+  color: #ffffff;
+  z-index: 3;
+}
+.header .menu__box {
+  display: none;
+}
+.header #menu__toggle {
+  display: none;
+}
+.header #menu__toggle {
+  opacity: 0;
+}
+.header .menu__btn {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 24.5px;
+  right: 40px;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 9999;
+  background-color: #ffffff;
+  border: 2px solid #de6d6e;
+  border-radius: 5px;
+}
+.header .menu__btn > span, .header .menu__btn > span::before, .header .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 22px;
+  height: 3px;
+  background-color: #de6d6e;
+  transition-duration: 0.3s;
+}
+.header .menu__btn > span {
+  left: 7px;
+}
+.header .menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+.header .menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+.header .menu__box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  margin: 0;
+  z-index: 9998;
+  list-style: none;
+  padding: 115px 0 0 0;
+  text-align: center;
+  opacity: 0.9;
+  background-color: #ffffff;
+  border-left: 3px solid #de6d6e;
+  border-bottom: 3px solid #de6d6e;
+  border-bottom-left-radius: 10px;
+  transition-duration: 0.3s;
+}
+.header .menu__box > li {
+  border-top: 3px solid #de6d6e;
+}
+.header .menu__box .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: #454545;
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+.header .menu__box .menu__item:hover {
+  background-color: rgba(222, 109, 110, 0.39);
+}
+.header #menu__toggle:checked ~ .menu__btn > span {
+  transform: rotate(45deg);
+}
+.header #menu__toggle:checked ~ .menu__btn > span::before {
+  top: 0;
+}
+.header #menu__toggle:checked ~ .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+.header #menu__toggle:checked ~ .menu__box {
+  visibility: visible;
+  right: 0;
+}
+@media (min-width: 992px) {
+  .header .hamburger-menu {
+    display: none;
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page .ellipses {
+  width: 156px;
+  height: 151px;
+  position: relative;
+  margin-top: 141px;
+}
+.page .ellipses .big-ellipse {
+  width: 117px;
+  height: 117px;
+  opacity: 0.56;
+  background-color: #ffffff;
+  border-radius: 117px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.page .ellipses .middle-ellipse {
+  width: 92px;
+  height: 92px;
+  opacity: 0.58;
+  background-color: #ffffff;
+  border-radius: 92px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.page .ellipses .small-ellipse {
+  width: 71px;
+  height: 71px;
+  opacity: 0.58;
+  background-color: #ffffff;
+  border-radius: 71px;
+  position: absolute;
+  right: 0;
+  bottom: 23px;
+}
+.page h1 {
+  font-family: "Conv_Alte Haas Grotesk Bold";
+  font-size: 69px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 10px gray;
+  margin-top: 15px;
+}
+.page h2 {
+  font-family: "Univers LT 45";
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0 10px gray;
+  padding-left: 35px;
+  margin-bottom: 80px;
+}
+
+.about-us h2 {
+  font-family: "Univers LT 45";
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #404040;
+  text-align: center;
+  margin-top: 57px;
+}
+.about-us h3 {
+  font-family: "Univers LT 45";
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #636363;
+  max-width: 828px;
+  text-align: center;
+  margin: 14px auto 0;
+}
+.about-us .feature {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.about-us .feature__column {
+  flex: 0 0 256.25px;
+  display: flex;
+  justify-content: center;
+}
+.about-us .feature__ellipse {
+  width: 179px;
+  height: 179px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 85px;
+}
+.about-us .feature__ellipse p {
+  font-family: "Univers LT 45";
+  font-size: 17px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #ffffff;
+}
+.about-us .feature__ellipse .beer {
+  margin-left: 15px;
+}
+.about-us .blue {
+  background-color: #4eb9f4;
+}
+.about-us .green {
+  background-color: #6fc125;
+}
+.about-us .red {
+  background-color: #ff5649;
+}
+.about-us .orange {
+  background-color: #e48f23;
 }
 
 /*# sourceMappingURL=style.css.map */

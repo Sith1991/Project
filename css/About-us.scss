@@ -1,0 +1,64 @@
+.about-us {
+  h2 {
+    @include UniversLT;
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #404040;
+    text-align: center;
+    margin-top: 57px;
+  }
+  h3 {
+    @include UniversLT;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 300;
+    color: #636363;
+    max-width: 828px;
+    text-align: center;
+    margin: 14px auto 0;
+
+  }
+  .feature {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .feature__column {
+    flex: 0 0 256.25px;
+    display: flex;
+    justify-content: center;
+  }
+  .feature__ellipse {
+    width: 179px;
+    height: 179px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 85px;
+    p {
+      @include UniversLT;
+      font-size: 17px;
+      line-height: 1.2;
+      font-weight: 300;
+      color: #ffffff;
+    }
+  .beer {
+    margin-left: 15px;
+  }
+  }
+  .blue {
+    background-color: #4eb9f4;
+  }
+  .green {
+    background-color: #6fc125;
+  }
+  .red {
+    background-color: #ff5649;
+  }
+  .orange {
+    background-color: #e48f23;
+  }
+}

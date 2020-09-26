@@ -1,0 +1,64 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+.ellipses {
+  width: 156px;
+  height: 151px;
+  position: relative;
+  margin-top: 141px;
+
+.big-ellipse {
+  width: 117px;
+  height: 117px;
+  opacity: 0.56;
+  background-color: #ffffff;
+  border-radius: 117px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.middle-ellipse {
+  width: 92px;
+  height: 92px;
+  opacity: 0.58;
+  background-color: #ffffff;
+  border-radius: 92px;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+  .small-ellipse {
+    width: 71px;
+    height: 71px;
+    opacity: 0.58;
+    background-color: #ffffff;
+    border-radius: 71px;
+    position: absolute;
+    right: 0;
+    bottom: 23px;
+  }
+}
+h1 {
+  @include AlteHaasGrotesk_;
+  font-size: 69px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0 0 10px gray;
+  margin-top: 15px;
+}
+h2 {
+  @include UniversLT;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0 10px gray;
+  padding-left: 35px;
+  margin-bottom: 80px;
+}
+
+}

@@ -1,0 +1,171 @@
+.bgc-white {
+  opacity: 0.9;
+  background-color: #ffffff;
+  position:fixed;
+  top:0;
+  width: 100%;
+  height: 89px;
+  max-width: inherit;
+}
+
+.header {
+  height: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__logo {
+  @include Lavanderia;
+  font-size: 41px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #000000;
+    z-index: 3;
+    padding: 0 36px;
+  span {
+    color: #b73958;
+  }
+}
+&__menu {
+  width: 470px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  z-index: 3;
+  padding: 0 48px;
+  @media (max-width:991px) {
+    & {
+      display: none;
+    }
+  }
+}
+  .menu_item_horizont {
+    opacity: 0.74;
+    @include SegoeUI;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #454545;
+    text-decoration: none;
+  }
+  &__btn {
+    width: 87px;
+    height: 27px;
+    border-radius: 2px;
+    background-color: #de6d6e;
+    @include SegoeUI;
+    font-size: 17px;
+    line-height: 27px;
+    font-weight: 400;
+    color: #ffffff;
+    z-index: 3;
+    }
+
+  // Делаем бургер меню 
+  .menu__box {
+    display:none;
+  }
+  #menu__toggle {
+    display:none;
+  }
+  // скрываем чекбокс 
+  #menu__toggle {
+    opacity: 0;
+  }
+  .menu__btn {
+    display: flex; // используем flex для центрирования содержимого 
+    align-items: center; // центрируем содержимое кнопки 
+    position: fixed;
+    top: 24.5px;
+    right: 40px;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: #ffffff;
+    border: 2px solid #de6d6e;;
+    border-radius: 5px;
+    // добавляем "гамбургер" 
+    & > span,
+    & > span::before,
+    & > span::after {
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 3px;
+      background-color: #de6d6e;
+      transition-duration: .3s;
+    }
+    & > span {
+      left: 7px;         // центруем линии в бургере 
+    }
+
+    & > span::before {
+      content: '';
+      top: -8px;
+    }
+    & > span::after {
+      content: '';
+      top: 8px;
+    }
+  }
+  // контейнер меню 
+  .menu__box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    margin: 0;
+    z-index: 9998;
+    list-style: none;
+    padding: 115px 0 0 0;
+    text-align: center;
+    opacity: 0.9;
+    background-color: #ffffff;
+    border-left: 3px solid #de6d6e;
+    border-bottom: 3px solid #de6d6e;
+    border-bottom-left-radius: 10px;
+    transition-duration: .3s;
+    & > li {
+      border-top: 3px solid #de6d6e;
+    }
+
+    // элементы меню 
+    .menu__item {
+      display: block;
+      padding: 12px 24px;
+      color: #454545;
+      font-family: 'Myriad Pro', sans-serif;;
+      font-size: 20px;
+      font-weight: 400;
+      text-decoration: none;
+      transition-duration: .3s;
+      &:hover {
+        background-color: rgba(222, 109, 110, 0.39);
+      }
+    }
+  }
+  #menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+  }
+  #menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+  }
+  @media (min-width:992px) {
+    .hamburger-menu {
+      display: none;
+    }
+  }
+}
