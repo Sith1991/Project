@@ -13,13 +13,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: inherit;
+  z-index: 5;
   &__logo {
   @include Lavanderia;
   font-size: 41px;
   line-height: 1.2;
   font-weight: 400;
   color: #000000;
-    z-index: 3;
+    //z-index: 5;
     padding: 0 36px;
   span {
     color: #b73958;
@@ -31,7 +36,7 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  z-index: 3;
+  //z-index: 5;
   padding: 0 48px;
   @media (max-width:991px) {
     & {
@@ -58,7 +63,7 @@
     line-height: 27px;
     font-weight: 400;
     color: #ffffff;
-    z-index: 3;
+    //z-index: 5;
     }
 
   // Делаем бургер меню 

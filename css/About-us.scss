@@ -1,4 +1,5 @@
 .about-us {
+  background-color: #fff;
   h2 {
     @include UniversLT;
     font-size: 35px;
@@ -17,7 +18,6 @@
     max-width: 828px;
     text-align: center;
     margin: 14px auto 0;
-
   }
   .feature {
     display: flex;

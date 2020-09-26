@@ -1,0 +1,44 @@
+.columns {
+  background-color: #fff;
+  .columns__row {
+  display: flex;
+    flex-direction: column;
+    &:last-child {
+      margin-bottom: 81px;
+    }
+  }
+  .columns__item {
+    display: flex;
+    margin-top: 80px;
+    margin-left: 65px;
+    flex-wrap: wrap;
+    justify-content: center;
+    @media (max-width:767px) {
+      & {
+        margin-left: 10px;
+      }
+    }
+    .item__img {
+      flex: 0 0 199px;
+    }
+    .item__body {
+      flex: 1 1 735px;
+      margin-left: 26px;
+      .item__title {
+        @include UniversLT;
+        font-size: 27px;
+        line-height: 1.2;
+        font-weight: 300;
+        color: #404040;
+        margin-bottom: 17px;
+      }
+      .item__text {
+        @include UniversLT;
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 300;
+        color: #8b8b8b;
+      }
+    }
+  }
+}
