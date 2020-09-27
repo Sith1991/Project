@@ -1,0 +1,20 @@
+{
+  "name": "1st_scss_project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sith1991/Project.git"
+  },
+  "author": "Sith91",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sith1991/Project/issues"
+  },
+  "homepage": "https://github.com/Sith1991/Project#readme"
+}
