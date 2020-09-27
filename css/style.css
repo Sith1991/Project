@@ -54,7 +54,6 @@ body {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -68,8 +67,9 @@ body {
 }
 
 .home {
-  background: #000 url(../img/page_bg.jpg) center center no-repeat;
+  background: #000 url(../img/page_bg.jpg) center/cover no-repeat;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .bgc-white {
@@ -432,6 +432,108 @@ body {
 }
 .about-us .orange {
   background-color: #e48f23;
+}
+
+.footer {
+  background-color: #222c29;
+  height: 258px;
+}
+.footer .footer__body {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.footer .footer__body ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer .footer__menu {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.footer .footer__menu .submenu__link {
+  font-family: "Univers LT 45";
+  font-size: 21px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #aeaeae;
+  text-decoration: none;
+}
+.footer .footer__menu .submenu__link:after {
+  content: url(../img/strelka.png);
+  display: inline-block;
+  margin-left: 10px;
+}
+.footer .footer__menu .submenu__link:hover {
+  color: white;
+}
+.footer .footer__menu .footer_sub-menu {
+  background: #222c29;
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  width: 95px;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  transition: 0.5s ease-in-out;
+}
+.footer .footer__menu .footer_sub-menu #first {
+  margin-top: 25px;
+}
+.footer .footer__menu .footer_sub-menu a {
+  font-family: "Univers LT 45";
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 300;
+  color: #8b8b8b;
+  text-decoration: none;
+}
+.footer .footer__menu .footer_sub-menu li {
+  border-bottom: 1px solid #aeaeae;
+}
+.footer .footer__menu .footer_sub-menu a:hover {
+  color: white;
+}
+.footer .footer__menu .sub-menu__item {
+  position: relative;
+}
+.footer .footer__menu .sub-menu__item:hover .footer_sub-menu {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.footer .links-with-name {
+  flex: 0 0 277px;
+  margin: 0 auto;
+}
+.footer .links-with-name .footer__social-links {
+  max-width: 277px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .links-with-name .footer__social-links .social-link {
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  background-color: #696b6a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 54px 0 30px;
+}
+.footer .links-with-name .footer__social-links .social-link:hover {
+  background-color: #d9dcda;
+}
+.footer .links-with-name .name {
+  font-family: "Univers LT 45";
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #8b8b8b;
 }
 
 /*# sourceMappingURL=style.css.map */
